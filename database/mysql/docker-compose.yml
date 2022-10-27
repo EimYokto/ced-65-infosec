@@ -6,8 +6,8 @@ services:
     image: mysql:latest # use the latest image.
     container_name: mysql
     restart: always
-    environment:
-      POSTGRES_PASSWORD: mypassmysql
+    env_file:
+      - database.env
   adminer:
     image: adminer
     restart: always

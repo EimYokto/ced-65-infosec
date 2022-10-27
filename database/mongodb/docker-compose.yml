@@ -6,8 +6,8 @@ services:
     image: mongo:latest # use the latest image.
     container_name: mongodb
     restart: always
-    environment:
-      POSTGRES_PASSWORD: mypassmongodb
+    env_file:
+      - database.env
   adminer:
     image: adminer
     restart: always
