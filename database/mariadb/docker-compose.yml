@@ -6,8 +6,8 @@ services:
     image: mariadb:latest # use the latest image.
     container_name: mariadb
     restart: always
-    environment:
-      POSTGRES_PASSWORD: mypassmariadb
+    env_file:
+      - database.env
   adminer:
     image: adminer
     restart: always
