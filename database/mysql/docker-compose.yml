@@ -2,12 +2,12 @@ version: '3.1'
 
 services:
 
-  postgres:
-    image: postgres
-    container_name: postgres
+  mysql:
+    image: mysql:latest # use the latest image.
+    container_name: mysql
     restart: always
     environment:
-      POSTGRES_PASSWORD: mypasspostgres
+      POSTGRES_PASSWORD: mypassmysql
   adminer:
     image: adminer
     restart: always

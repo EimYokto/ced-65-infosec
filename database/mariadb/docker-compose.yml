@@ -2,12 +2,12 @@ version: '3.1'
 
 services:
 
-  postgres:
-    image: postgres
-    container_name: postgres
+  mariadb:
+    image: mariadb:latest # use the latest image.
+    container_name: mariadb
     restart: always
     environment:
-      POSTGRES_PASSWORD: mypasspostgres
+      POSTGRES_PASSWORD: mypassmariadb
   adminer:
     image: adminer
     restart: always
