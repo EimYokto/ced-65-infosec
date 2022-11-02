@@ -6,8 +6,10 @@ services:
     image: mariadb:latest # use the latest image.
     container_name: mariadb
     restart: always
-    env_file:
-      - database.env
+    environment:
+      MARIADB_USER: ${MARIADB_USER}
+      MARIADB_PASSWORD: ${MARIADB_PASSWORD}
+      MARIADB_ROOT_PASSWORD: ${MARIADB_ROOT_PASSWORD}
   adminer:
     image: adminer
     restart: always

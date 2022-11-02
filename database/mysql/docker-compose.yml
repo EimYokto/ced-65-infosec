@@ -6,8 +6,10 @@ services:
     image: mysql:latest # use the latest image.
     container_name: mysql
     restart: always
-    env_file:
-      - database.env
+    environment:
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
   adminer:
     image: adminer
     restart: always
